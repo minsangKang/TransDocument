@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct TransDocumentApp: App {
     var body: some Scene {
+        let model = NewDocumentModel()
         WindowGroup {
-            ContentView()
+            NewDocumentView(model: model)
         }
     }
 }
