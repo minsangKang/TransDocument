@@ -15,9 +15,11 @@ final class NewDocumentModel: ObservableObject {
     @Published var isEditable: Bool = true
     @Published var submitSelectable: Bool = false
     
+    private let textAdjustUseCase: TextAdjustUseCaseInterface
     private var cancellables: Set<AnyCancellable> = []
     
-    init() {
+    init(textAdnustUseCase: TextAdjustUseCaseInterface) {
+        self.textAdjustUseCase = textAdnustUseCase
         self.bind()
     }
     
@@ -43,8 +45,10 @@ final class NewDocumentModel: ObservableObject {
 // MARK: Input
 extension NewDocumentModel {
     func submit() {
+        self.text = self.textAdjustUseCase.adjustText(from: self.text)
         print("title: \(title)")
         print("url: \(url)")
         print("text: \(text)")
+        self.isEditable = false
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TDEditTextView: NSViewRepresentable {
     @Binding var text: String
-    var isEditable: Bool = true
+    @Binding var isEditable: Bool
     var font: NSFont?    = .systemFont(ofSize: 14, weight: .regular)
     
     var onEditingChanged: () -> Void       = {}
@@ -34,6 +34,7 @@ struct TDEditTextView: NSViewRepresentable {
     
     func updateNSView(_ view: CustomTextView, context: Context) {
         view.text = text
+        view.updateEditable(to: isEditable)
         view.selectedRanges = context.coordinator.selectedRanges
     }
 }
@@ -144,6 +145,7 @@ final class CustomTextView: NSView {
         textView.minSize                 = NSSize(width: 0, height: contentSize.height)
         textView.textColor               = NSColor(Colors.black001.toColor)
         textView.allowsUndo              = true
+        textView.isRichText              = false
         textView.textContainerInset = NSSize(width: 0, height: 4)
         
         return textView
@@ -185,30 +187,34 @@ final class CustomTextView: NSView {
     private func setupTextView() {
         self.scrollView.documentView = self.textView
     }
-}
-
-// MARK: - Preview
-#if DEBUG
-
-struct TDEditTextView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            TDEditTextView(
-                text: .constant("{ \n    planets { \n        name \n    }\n}"),
-                isEditable: true,
-                font: .userFixedPitchFont(ofSize: 14)
-            )
-            .environment(\.colorScheme, .dark)
-            .previewDisplayName("Dark Mode")
-            
-            TDEditTextView(
-                text: .constant("{ \n    planets { \n        name \n    }\n}"),
-                isEditable: true,
-                font: .userFixedPitchFont(ofSize: 14)
-            )
-            .environment(\.colorScheme, .light)
-            .previewDisplayName("Light Mode")
-        }
+    
+    func updateEditable(to editable: Bool) {
+        self.textView.isEditable = editable
     }
 }
-#endif
+
+//// MARK: - Preview
+//#if DEBUG
+//
+//struct TDEditTextView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            TDEditTextView(
+//                text: .constant("{ \n    planets { \n        name \n    }\n}"),
+//                isEditable: true,
+//                font: .userFixedPitchFont(ofSize: 14)
+//            )
+//            .environment(\.colorScheme, .dark)
+//            .previewDisplayName("Dark Mode")
+//            
+//            TDEditTextView(
+//                text: .constant("{ \n    planets { \n        name \n    }\n}"),
+//                isEditable: true,
+//                font: .userFixedPitchFont(ofSize: 14)
+//            )
+//            .environment(\.colorScheme, .light)
+//            .previewDisplayName("Light Mode")
+//        }
+//    }
+//}
+//#endif

@@ -44,7 +44,7 @@ struct NewDocumentView: View {
                 
                 TDEditTextView(
                     text: $model.text,
-                    isEditable: model.isEditable,
+                    isEditable: $model.isEditable,
                     font: .userFixedPitchFont(ofSize: 14)
                 )
                 .border(Colors.gray001.toColor, width: 1)
@@ -63,5 +63,5 @@ struct NewDocumentView: View {
 }
 
 #Preview {
-    NewDocumentView(model: NewDocumentModel())
+    NewDocumentView(model: NewDocumentModel(textAdnustUseCase: TextAdjustUseCase()))
 }

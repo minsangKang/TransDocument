@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct TransDocumentApp: App {
     var body: some Scene {
-        let model = NewDocumentModel()
+        let model = NewDocumentModel(textAdnustUseCase: TextAdjustUseCase())
         WindowGroup {
             NewDocumentView(model: model)
         }
