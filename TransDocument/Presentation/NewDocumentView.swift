@@ -20,41 +20,38 @@ struct NewDocumentView: View {
             
             VStack(alignment: .leading, spacing: 8) {
                 HStack(alignment: .bottom, spacing: 16) {
-                    TextField("Title", text: $model.title)
-                        .font(.largeTitle)
+                    TextField("TITLE", text: $model.title)
+                        .font(.system(size: 22, weight: .bold))
                         .foregroundStyle(Colors.black001.toColor)
                         .textFieldStyle(.plain)
                     
                     Text(Date().yy_MM_dd)
-                        .font(.subheadline)
-                        .foregroundStyle(Colors.black001.toColor)
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundStyle(Colors.black002.toColor)
                 }
-                
                 
                 Rectangle()
                     .frame(height: 2)
                     .foregroundStyle(Colors.gray001.toColor)
                 
-                TextField("url", text: $model.url)
-                    .font(.title3)
-                    .foregroundStyle(Colors.black001.toColor)
+                TextField("URL", text: $model.url)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(Colors.black002.toColor)
                     .textFieldStyle(.plain)
                 
                 Spacer()
                     .frame(height: 8)
                 
-                ZStack {
-                    Colors.gray001.toColor.opacity(0.1)
-                    
-                    Text("TextView")
-                        .font(.body)
-                        .foregroundStyle(Colors.black001.toColor)
-                }
-                .frame(height: 300)
+                TDEditTextView(
+                    text: $model.text,
+                    isEditable: model.isEditable,
+                    font: .userFixedPitchFont(ofSize: 14)
+                )
+                .border(Colors.gray001.toColor, width: 1)
             }
             .padding(32)
         }
-        .frame(minWidth: 500, minHeight: 600)
+        .frame(minWidth: 500, minHeight: 500)
     }
 }
 
