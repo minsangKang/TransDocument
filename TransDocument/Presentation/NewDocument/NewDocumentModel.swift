@@ -18,14 +18,17 @@ final class NewDocumentModel: ObservableObject {
     
     private let textAdjustUseCase: TextAdjustUseCaseInterface
     private let sentenceAdjustUseCase: SentenceAdjustUseCaseInterface
+    private let getWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface
     private var cancellables: Set<AnyCancellable> = []
     
     init(
         textAdnustUseCase: TextAdjustUseCaseInterface,
-        sentenceAdjustUseCase: SentenceAdjustUseCaseInterface
+        sentenceAdjustUseCase: SentenceAdjustUseCaseInterface,
+        getWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface
     ) {
         self.textAdjustUseCase = textAdnustUseCase
         self.sentenceAdjustUseCase = sentenceAdjustUseCase
+        self.getWordsFromSentenceUseCase = getWordsFromSentenceUseCase
         self.bind()
     }
     
@@ -53,6 +56,15 @@ extension NewDocumentModel {
     func submit() {
         self.text = self.textAdjustUseCase.adjustText(from: self.text)
         self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: self.text)
+        var words: [String] = []
+        for sentence in self.sentences {
+            for word in self.getWordsFromSentenceUseCase.getWords(from: sentence) where !words.contains(word) {
+                words.append(word)
+            }
+        }
+        for word in words {
+            print(word)
+        }
         self.isEditable = false
     }
 }

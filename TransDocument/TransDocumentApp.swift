@@ -12,7 +12,12 @@ struct TransDocumentApp: App {
     var body: some Scene {
         let textAdjustUseCase = TextAdjustUseCase()
         let sentenceAdjustUseCase = SentenceAdjustUseCase()
-        let model = NewDocumentModel(textAdnustUseCase: textAdjustUseCase, sentenceAdjustUseCase: sentenceAdjustUseCase)
+        let getWordsFromSentenceUseCase = GetWordsFromSentenceUseCase()
+        let model = NewDocumentModel(
+            textAdnustUseCase: textAdjustUseCase,
+            sentenceAdjustUseCase: sentenceAdjustUseCase,
+            getWordsFromSentenceUseCase: getWordsFromSentenceUseCase
+        )
         WindowGroup {
             NewDocumentView(model: model)
         }
