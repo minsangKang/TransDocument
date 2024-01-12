@@ -14,6 +14,7 @@ final class NewDocumentModel: ObservableObject {
     @Published var text: String = ""
     @Published var isEditable: Bool = true
     @Published var submitSelectable: Bool = false
+    @Published var wordInfos: [WordInfo] = []
     private(set) var sentences: [String] = []
     
     private let textAdjustUseCase: TextAdjustUseCaseInterface
@@ -54,17 +55,8 @@ final class NewDocumentModel: ObservableObject {
 // MARK: Input
 extension NewDocumentModel {
     func submit() {
-        self.text = self.textAdjustUseCase.adjustText(from: self.text)
-        self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: self.text)
-        var words: [String] = []
-        for sentence in self.sentences {
-            for word in self.getWordsFromSentenceUseCase.getWords(from: sentence) where !words.contains(word) {
-                words.append(word)
-            }
-        }
-        for word in words {
-            print(word)
-        }
-        self.isEditable = false
+        let text = self.textAdjustUseCase.adjustText(from: self.text)
+        self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: text)
+        self.wordInfos = self.getWordsFromSentenceUseCase.getWordInfos(sentences: self.sentences)
     }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol GetWordsFromSentenceUseCaseInterface {
     func getWords(from: String) -> [String]
+    func getWordInfos(sentences: [String]) -> [WordInfo]
 }

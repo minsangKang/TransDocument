@@ -16,6 +16,7 @@
 		87C192672B512AA3009964D3 /* GetWordsFromSentenceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192662B512AA3009964D3 /* GetWordsFromSentenceUseCase.swift */; };
 		87C192692B512B32009964D3 /* GetWordsFromSentenceUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192682B512B32009964D3 /* GetWordsFromSentenceUseCaseInterface.swift */; };
 		87C1926B2B513B8A009964D3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1926A2B513B8A009964D3 /* String+Extension.swift */; };
+		87C1926E2B513D96009964D3 /* WordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1926D2B513D96009964D3 /* WordInfo.swift */; };
 		87EB9F6C2B50C508003CB76F /* TransDocumentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F6B2B50C508003CB76F /* TransDocumentApp.swift */; };
 		87EB9F702B50C509003CB76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87EB9F6F2B50C509003CB76F /* Assets.xcassets */; };
 		87EB9F732B50C509003CB76F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87EB9F722B50C509003CB76F /* Preview Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		87C192662B512AA3009964D3 /* GetWordsFromSentenceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordsFromSentenceUseCase.swift; sourceTree = "<group>"; };
 		87C192682B512B32009964D3 /* GetWordsFromSentenceUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWordsFromSentenceUseCaseInterface.swift; sourceTree = "<group>"; };
 		87C1926A2B513B8A009964D3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		87C1926D2B513D96009964D3 /* WordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfo.swift; sourceTree = "<group>"; };
 		87EB9F682B50C508003CB76F /* TransDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB9F6B2B50C508003CB76F /* TransDocumentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDocumentApp.swift; sourceTree = "<group>"; };
 		87EB9F6F2B50C509003CB76F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		87C1925A2B511722009964D3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				87C1926C2B513D8B009964D3 /* Entity */,
 				87C1925B2B51172E009964D3 /* UseCase */,
 			);
 			path = Domain;
@@ -103,6 +106,14 @@
 				87EB9F7D2B50CC94003CB76F /* NewDocumentModel.swift */,
 			);
 			path = NewDocument;
+			sourceTree = "<group>";
+		};
+		87C1926C2B513D8B009964D3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				87C1926D2B513D96009964D3 /* WordInfo.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		87EB9F5F2B50C508003CB76F = {
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C192602B5120BD009964D3 /* TextAdjustUseCaseInterface.swift in Sources */,
+				87C1926E2B513D96009964D3 /* WordInfo.swift in Sources */,
 				87C192652B512649009964D3 /* SentenceAdjustUseCaseInterface.swift in Sources */,
 				87EB9F7B2B50CC59003CB76F /* NewDocumentView.swift in Sources */,
 				87EB9F852B50D079003CB76F /* Color+Extension.swift in Sources */,
