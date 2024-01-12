@@ -48,10 +48,17 @@ struct NewDocumentView: View {
                     font: .userFixedPitchFont(ofSize: 14)
                 )
                 .border(Colors.gray001.toColor, width: 1)
+                
+                HStack {
+                    Spacer()
+                    TDSubmitButton(selectable: $model.submitSelectable) {
+                        model.submit()
+                    }
+                }
             }
             .padding(32)
         }
-        .frame(minWidth: 500, minHeight: 500)
+        .frame(minWidth: 450, minHeight: 500)
     }
 }
 
