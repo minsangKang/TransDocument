@@ -63,5 +63,8 @@ struct NewDocumentView: View {
 }
 
 #Preview {
-    NewDocumentView(model: NewDocumentModel(textAdnustUseCase: TextAdjustUseCase()))
+    NewDocumentView(model: NewDocumentModel(
+        textAdnustUseCase: TextAdjustUseCase(),
+        sentenceAdjustUseCase: SentenceAdjustUseCase())
+    )
 }

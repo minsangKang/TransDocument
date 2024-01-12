@@ -14,12 +14,18 @@ final class NewDocumentModel: ObservableObject {
     @Published var text: String = ""
     @Published var isEditable: Bool = true
     @Published var submitSelectable: Bool = false
+    private(set) var sentences: [String] = []
     
     private let textAdjustUseCase: TextAdjustUseCaseInterface
+    private let sentenceAdjustUseCase: SentenceAdjustUseCaseInterface
     private var cancellables: Set<AnyCancellable> = []
     
-    init(textAdnustUseCase: TextAdjustUseCaseInterface) {
+    init(
+        textAdnustUseCase: TextAdjustUseCaseInterface,
+        sentenceAdjustUseCase: SentenceAdjustUseCaseInterface
+    ) {
         self.textAdjustUseCase = textAdnustUseCase
+        self.sentenceAdjustUseCase = sentenceAdjustUseCase
         self.bind()
     }
     
@@ -46,9 +52,7 @@ final class NewDocumentModel: ObservableObject {
 extension NewDocumentModel {
     func submit() {
         self.text = self.textAdjustUseCase.adjustText(from: self.text)
-        print("title: \(title)")
-        print("url: \(url)")
-        print("text: \(text)")
+        self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: self.text)
         self.isEditable = false
     }
 }

@@ -11,6 +11,8 @@
 		87C192592B510961009964D3 /* TDSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192582B510961009964D3 /* TDSubmitButton.swift */; };
 		87C1925D2B51173D009964D3 /* TextAdjustUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */; };
 		87C192602B5120BD009964D3 /* TextAdjustUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1925F2B5120BD009964D3 /* TextAdjustUseCaseInterface.swift */; };
+		87C192632B51249F009964D3 /* SentenceAdjustUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192622B51249F009964D3 /* SentenceAdjustUseCase.swift */; };
+		87C192652B512649009964D3 /* SentenceAdjustUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192642B512649009964D3 /* SentenceAdjustUseCaseInterface.swift */; };
 		87EB9F6C2B50C508003CB76F /* TransDocumentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F6B2B50C508003CB76F /* TransDocumentApp.swift */; };
 		87EB9F702B50C509003CB76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87EB9F6F2B50C509003CB76F /* Assets.xcassets */; };
 		87EB9F732B50C509003CB76F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87EB9F722B50C509003CB76F /* Preview Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		87C192582B510961009964D3 /* TDSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSubmitButton.swift; sourceTree = "<group>"; };
 		87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAdjustUseCase.swift; sourceTree = "<group>"; };
 		87C1925F2B5120BD009964D3 /* TextAdjustUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAdjustUseCaseInterface.swift; sourceTree = "<group>"; };
+		87C192622B51249F009964D3 /* SentenceAdjustUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceAdjustUseCase.swift; sourceTree = "<group>"; };
+		87C192642B512649009964D3 /* SentenceAdjustUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceAdjustUseCaseInterface.swift; sourceTree = "<group>"; };
 		87EB9F682B50C508003CB76F /* TransDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB9F6B2B50C508003CB76F /* TransDocumentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDocumentApp.swift; sourceTree = "<group>"; };
 		87EB9F6F2B50C509003CB76F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */,
+				87C192622B51249F009964D3 /* SentenceAdjustUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -78,8 +83,18 @@
 			isa = PBXGroup;
 			children = (
 				87C1925F2B5120BD009964D3 /* TextAdjustUseCaseInterface.swift */,
+				87C192642B512649009964D3 /* SentenceAdjustUseCaseInterface.swift */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		87C192612B5123FF009964D3 /* NewDocument */ = {
+			isa = PBXGroup;
+			children = (
+				87EB9F7A2B50CC59003CB76F /* NewDocumentView.swift */,
+				87EB9F7D2B50CC94003CB76F /* NewDocumentModel.swift */,
+			);
+			path = NewDocument;
 			sourceTree = "<group>";
 		};
 		87EB9F5F2B50C508003CB76F = {
@@ -123,9 +138,8 @@
 		87EB9F7C2B50CC66003CB76F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				87C192612B5123FF009964D3 /* NewDocument */,
 				87C1925E2B5120B5009964D3 /* Interface */,
-				87EB9F7A2B50CC59003CB76F /* NewDocumentView.swift */,
-				87EB9F7D2B50CC94003CB76F /* NewDocumentModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -228,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C192602B5120BD009964D3 /* TextAdjustUseCaseInterface.swift in Sources */,
+				87C192652B512649009964D3 /* SentenceAdjustUseCaseInterface.swift in Sources */,
 				87EB9F7B2B50CC59003CB76F /* NewDocumentView.swift in Sources */,
 				87EB9F852B50D079003CB76F /* Color+Extension.swift in Sources */,
+				87C192632B51249F009964D3 /* SentenceAdjustUseCase.swift in Sources */,
 				87EB9F822B50CF70003CB76F /* Colors.swift in Sources */,
 				87EB9F6C2B50C508003CB76F /* TransDocumentApp.swift in Sources */,
 				87C192572B50EA3E009964D3 /* TDEditTextView.swift in Sources */,
