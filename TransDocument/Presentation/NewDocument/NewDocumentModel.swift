@@ -57,6 +57,7 @@ extension NewDocumentModel {
     func submit() {
         let text = self.textAdjustUseCase.adjustText(from: self.text)
         self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: text)
+        self.text = self.textAdjustUseCase.getAdjustedText(from: self.sentences)
         self.wordInfos = self.getWordsFromSentenceUseCase.getWordInfos(sentences: self.sentences)
     }
     

@@ -9,4 +9,5 @@ import Foundation
 
 protocol TextAdjustUseCaseInterface {
     func adjustText(from: String) -> String
+    func getAdjustedText(from sentences: [String]) -> String
 }
