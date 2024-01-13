@@ -5,3 +5,4 @@
 - [NSTextView](https://developer.apple.com/documentation/appkit/nstextview)
 - [[SwiftUI] MacEditorTextView - A simple and small NSTextView wrapped by SwiftUI.](https://gist.github.com/unnamedd/6e8c3fbc806b8deb60fa65d6b9affab0)
 - [userFixedPitchFont(ofSize:)](https://developer.apple.com/documentation/appkit/nsfont/1531381-userfixedpitchfont)
+- [How to check if String is Number in Swift](https://sarunw.com/posts/how-to-check-if-string-is-number-in-swift/)

@@ -16,11 +16,19 @@ struct WordInfo: Identifiable {
     init(word: String, sentenceIndex: Int) {
         self.id = UUID()
         self.word = word
-        self.check = false
+        self.check = true
         self.sentenceIndex = sentenceIndex
     }
     
     mutating func toggle() {
         self.check.toggle()
+    }
+}
+
+extension WordInfo {
+    static var testInfo: WordInfo {
+        return .init(
+            word: "hello", sentenceIndex: 0
+        )
     }
 }

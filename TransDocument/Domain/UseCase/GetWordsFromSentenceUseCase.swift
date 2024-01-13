@@ -31,6 +31,6 @@ final class GetWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface {
         
         let filterWords = ["and", "or"]
         return words
-            .filter { filterWords.contains($0.word) }
+            .filter { !filterWords.contains($0.word) }
     }
 }

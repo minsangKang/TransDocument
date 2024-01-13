@@ -59,4 +59,12 @@ extension NewDocumentModel {
         self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: text)
         self.wordInfos = self.getWordsFromSentenceUseCase.getWordInfos(sentences: self.sentences)
     }
+    
+    func save() {
+        
+    }
+    
+    func delete(at index: Int) {
+        self.wordInfos.remove(at: index)
+    }
 }
