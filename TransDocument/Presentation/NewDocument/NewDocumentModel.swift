@@ -20,16 +20,19 @@ final class NewDocumentModel: ObservableObject {
     private let textAdjustUseCase: TextAdjustUseCaseInterface
     private let sentenceAdjustUseCase: SentenceAdjustUseCaseInterface
     private let getWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface
+    private let getTranslatedSentencesUseCase: GetTranslatedSentencesUseCaseInterface
     private var cancellables: Set<AnyCancellable> = []
     
     init(
         textAdnustUseCase: TextAdjustUseCaseInterface,
         sentenceAdjustUseCase: SentenceAdjustUseCaseInterface,
-        getWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface
+        getWordsFromSentenceUseCase: GetWordsFromSentenceUseCaseInterface,
+        getTranslatedSentencesUseCase: GetTranslatedSentencesUseCaseInterface
     ) {
         self.textAdjustUseCase = textAdnustUseCase
         self.sentenceAdjustUseCase = sentenceAdjustUseCase
         self.getWordsFromSentenceUseCase = getWordsFromSentenceUseCase
+        self.getTranslatedSentencesUseCase = getTranslatedSentencesUseCase
         self.bind()
     }
     
@@ -57,8 +60,22 @@ extension NewDocumentModel {
     func submit() {
         let text = self.textAdjustUseCase.adjustText(from: self.text)
         self.sentences = self.sentenceAdjustUseCase.adjustSentence(from: text)
+        
         self.text = self.textAdjustUseCase.getAdjustedText(from: self.sentences)
         self.wordInfos = self.getWordsFromSentenceUseCase.getWordInfos(sentences: self.sentences)
+        self.getTranslatedSentencesUseCase.getTranslatedSentencces(sentences: self.sentences)
+            .sink { completion in
+                switch completion {
+                case .finished: return
+                case .failure(let error):
+                    print(error)
+                }
+            } receiveValue: { [weak self] translatedSentences in
+                guard let self = self else { return }
+                self.text = self.textAdjustUseCase.getMixedText(sentences: self.sentences, transedSencences: translatedSentences)
+            }
+            .store(in: &cancellables)
+
     }
     
     func save() {

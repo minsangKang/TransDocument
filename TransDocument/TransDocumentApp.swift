@@ -13,10 +13,13 @@ struct TransDocumentApp: App {
         let textAdjustUseCase = TextAdjustUseCase()
         let sentenceAdjustUseCase = SentenceAdjustUseCase()
         let getWordsFromSentenceUseCase = GetWordsFromSentenceUseCase()
+        let getTranslatedSentencesUseCase = GetTranslatedSentencesUseCase(repository: TranslatorRepository())
+        
         let model = NewDocumentModel(
             textAdnustUseCase: textAdjustUseCase,
             sentenceAdjustUseCase: sentenceAdjustUseCase,
-            getWordsFromSentenceUseCase: getWordsFromSentenceUseCase
+            getWordsFromSentenceUseCase: getWordsFromSentenceUseCase,
+            getTranslatedSentencesUseCase: getTranslatedSentencesUseCase
         )
         WindowGroup {
             NewDocumentView(model: model)

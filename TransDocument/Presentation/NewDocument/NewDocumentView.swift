@@ -34,6 +34,7 @@ struct NewDocumentView: View {
     NewDocumentView(model: NewDocumentModel(
         textAdnustUseCase: TextAdjustUseCase(),
         sentenceAdjustUseCase: SentenceAdjustUseCase(),
-        getWordsFromSentenceUseCase: GetWordsFromSentenceUseCase())
+        getWordsFromSentenceUseCase: GetWordsFromSentenceUseCase(),
+        getTranslatedSentencesUseCase: GetTranslatedSentencesUseCase(repository: TranslatorRepository()))
     )
 }

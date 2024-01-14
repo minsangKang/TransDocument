@@ -30,4 +30,14 @@ final class TextAdjustUseCase: TextAdjustUseCaseInterface {
         
         return result
     }
+    
+    func getMixedText(sentences: [String], transedSencences: [String]) -> String {
+        var result = ""
+        for (row, transed) in zip(sentences, transedSencences) {
+            result += row + "\n\n"
+            result += transed + "\n\n\n"
+        }
+        
+        return result
+    }
 }

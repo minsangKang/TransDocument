@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		879788E32B53933E00DA3031 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 879788E22B53933E00DA3031 /* CombineMoya */; };
+		879788E52B53933E00DA3031 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 879788E42B53933E00DA3031 /* Moya */; };
+		879788E72B53933E00DA3031 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 879788E62B53933E00DA3031 /* ReactiveMoya */; };
+		879788E92B53933E00DA3031 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 879788E82B53933E00DA3031 /* RxMoya */; };
+		879788ED2B53936300DA3031 /* TranslatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788EC2B53936300DA3031 /* TranslatorAPI.swift */; };
+		879788EF2B5395DE00DA3031 /* TranslatorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788EE2B5395DE00DA3031 /* TranslatorRequest.swift */; };
+		879788F22B5396AB00DA3031 /* TranslatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788F12B5396AB00DA3031 /* TranslatorRepository.swift */; };
+		879788F42B53970B00DA3031 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788F32B53970B00DA3031 /* NetworkError.swift */; };
+		879788F72B5398A200DA3031 /* TranslateResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788F62B5398A200DA3031 /* TranslateResult.swift */; };
+		879788FA2B53999A00DA3031 /* TranslatorRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788F92B53999A00DA3031 /* TranslatorRepositoryInterface.swift */; };
+		879788FC2B539A1300DA3031 /* GetTranslatedSentencesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788FB2B539A1300DA3031 /* GetTranslatedSentencesUseCase.swift */; };
+		879788FE2B539AAA00DA3031 /* GetTranslatedSentencesUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879788FD2B539AAA00DA3031 /* GetTranslatedSentencesUseCaseInterface.swift */; };
+		879789042B53A73700DA3031 /* Infos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879789032B53A73700DA3031 /* Infos.swift */; };
 		87C192572B50EA3E009964D3 /* TDEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192562B50EA3E009964D3 /* TDEditTextView.swift */; };
 		87C192592B510961009964D3 /* TDSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C192582B510961009964D3 /* TDSubmitButton.swift */; };
 		87C1925D2B51173D009964D3 /* TextAdjustUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */; };
@@ -31,6 +44,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		879788EC2B53936300DA3031 /* TranslatorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorAPI.swift; sourceTree = "<group>"; };
+		879788EE2B5395DE00DA3031 /* TranslatorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorRequest.swift; sourceTree = "<group>"; };
+		879788F12B5396AB00DA3031 /* TranslatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorRepository.swift; sourceTree = "<group>"; };
+		879788F32B53970B00DA3031 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		879788F62B5398A200DA3031 /* TranslateResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateResult.swift; sourceTree = "<group>"; };
+		879788F92B53999A00DA3031 /* TranslatorRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorRepositoryInterface.swift; sourceTree = "<group>"; };
+		879788FB2B539A1300DA3031 /* GetTranslatedSentencesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTranslatedSentencesUseCase.swift; sourceTree = "<group>"; };
+		879788FD2B539AAA00DA3031 /* GetTranslatedSentencesUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTranslatedSentencesUseCaseInterface.swift; sourceTree = "<group>"; };
+		879789002B53A66300DA3031 /* environment.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = environment.xcconfig; sourceTree = "<group>"; };
+		879789012B53A70500DA3031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		879789032B53A73700DA3031 /* Infos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infos.swift; sourceTree = "<group>"; };
 		87C192562B50EA3E009964D3 /* TDEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDEditTextView.swift; sourceTree = "<group>"; };
 		87C192582B510961009964D3 /* TDSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSubmitButton.swift; sourceTree = "<group>"; };
 		87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAdjustUseCase.swift; sourceTree = "<group>"; };
@@ -61,12 +85,74 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879788E52B53933E00DA3031 /* Moya in Frameworks */,
+				879788E32B53933E00DA3031 /* CombineMoya in Frameworks */,
+				879788E92B53933E00DA3031 /* RxMoya in Frameworks */,
+				879788E72B53933E00DA3031 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		879788EA2B53934A00DA3031 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				879788F52B53983200DA3031 /* DTO */,
+				879788F02B53969E00DA3031 /* Repository */,
+				879788EB2B53935400DA3031 /* API */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		879788EB2B53935400DA3031 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				879788EC2B53936300DA3031 /* TranslatorAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		879788F02B53969E00DA3031 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				879788F12B5396AB00DA3031 /* TranslatorRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		879788F52B53983200DA3031 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				879788F62B5398A200DA3031 /* TranslateResult.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		879788F82B53998A00DA3031 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				879788F92B53999A00DA3031 /* TranslatorRepositoryInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		879788FF2B53A63A00DA3031 /* Secure */ = {
+			isa = PBXGroup;
+			children = (
+				879789002B53A66300DA3031 /* environment.xcconfig */,
+			);
+			path = Secure;
+			sourceTree = "<group>";
+		};
+		879789022B53A72200DA3031 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				879789032B53A73700DA3031 /* Infos.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 		87C192552B50EA0F009964D3 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +167,7 @@
 			children = (
 				87C1926C2B513D8B009964D3 /* Entity */,
 				87C1925B2B51172E009964D3 /* UseCase */,
+				879788F82B53998A00DA3031 /* Interface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -91,6 +178,7 @@
 				87C1925C2B51173D009964D3 /* TextAdjustUseCase.swift */,
 				87C192622B51249F009964D3 /* SentenceAdjustUseCase.swift */,
 				87C192662B512AA3009964D3 /* GetWordsFromSentenceUseCase.swift */,
+				879788FB2B539A1300DA3031 /* GetTranslatedSentencesUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -101,6 +189,7 @@
 				87C1925F2B5120BD009964D3 /* TextAdjustUseCaseInterface.swift */,
 				87C192642B512649009964D3 /* SentenceAdjustUseCaseInterface.swift */,
 				87C192682B512B32009964D3 /* GetWordsFromSentenceUseCaseInterface.swift */,
+				879788FD2B539AAA00DA3031 /* GetTranslatedSentencesUseCaseInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -119,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				87C1926D2B513D96009964D3 /* WordInfo.swift */,
+				879788EE2B5395DE00DA3031 /* TranslatorRequest.swift */,
+				879788F32B53970B00DA3031 /* NetworkError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -152,9 +243,11 @@
 		87EB9F6A2B50C508003CB76F /* TransDocument */ = {
 			isa = PBXGroup;
 			children = (
+				879789012B53A70500DA3031 /* Info.plist */,
 				87EB9F6B2B50C508003CB76F /* TransDocumentApp.swift */,
 				87EB9F7C2B50CC66003CB76F /* Presentation */,
 				87C1925A2B511722009964D3 /* Domain */,
+				879788EA2B53934A00DA3031 /* Data */,
 				87EB9F7F2B50CF57003CB76F /* Core */,
 				87EB9F6F2B50C509003CB76F /* Assets.xcassets */,
 				87EB9F742B50C509003CB76F /* TransDocument.entitlements */,
@@ -183,8 +276,10 @@
 		87EB9F7F2B50CF57003CB76F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				879789022B53A72200DA3031 /* Global */,
 				87EB9F832B50D06E003CB76F /* Extension */,
 				87EB9F802B50CF65003CB76F /* Design System */,
+				879788FF2B53A63A00DA3031 /* Secure */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -224,6 +319,12 @@
 			dependencies = (
 			);
 			name = TransDocument;
+			packageProductDependencies = (
+				879788E22B53933E00DA3031 /* CombineMoya */,
+				879788E42B53933E00DA3031 /* Moya */,
+				879788E62B53933E00DA3031 /* ReactiveMoya */,
+				879788E82B53933E00DA3031 /* RxMoya */,
+			);
 			productName = TransDocument;
 			productReference = 87EB9F682B50C508003CB76F /* TransDocument.app */;
 			productType = "com.apple.product-type.application";
@@ -252,6 +353,9 @@
 				Base,
 			);
 			mainGroup = 87EB9F5F2B50C508003CB76F;
+			packageReferences = (
+				879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 87EB9F692B50C508003CB76F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,18 +383,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C192602B5120BD009964D3 /* TextAdjustUseCaseInterface.swift in Sources */,
+				879788F22B5396AB00DA3031 /* TranslatorRepository.swift in Sources */,
+				879788F42B53970B00DA3031 /* NetworkError.swift in Sources */,
+				879788EF2B5395DE00DA3031 /* TranslatorRequest.swift in Sources */,
 				87C1926E2B513D96009964D3 /* WordInfo.swift in Sources */,
+				879788ED2B53936300DA3031 /* TranslatorAPI.swift in Sources */,
 				87C192712B5176F6009964D3 /* NewDocumentContentView.swift in Sources */,
 				87C192752B517897009964D3 /* CreateWordCell.swift in Sources */,
 				87C192652B512649009964D3 /* SentenceAdjustUseCaseInterface.swift in Sources */,
+				879788FA2B53999A00DA3031 /* TranslatorRepositoryInterface.swift in Sources */,
 				87EB9F7B2B50CC59003CB76F /* NewDocumentView.swift in Sources */,
 				87EB9F852B50D079003CB76F /* Color+Extension.swift in Sources */,
 				87C192632B51249F009964D3 /* SentenceAdjustUseCase.swift in Sources */,
+				879788FC2B539A1300DA3031 /* GetTranslatedSentencesUseCase.swift in Sources */,
 				87EB9F822B50CF70003CB76F /* Colors.swift in Sources */,
+				879788FE2B539AAA00DA3031 /* GetTranslatedSentencesUseCaseInterface.swift in Sources */,
+				879788F72B5398A200DA3031 /* TranslateResult.swift in Sources */,
 				87C192732B517812009964D3 /* NewDocumentWordsView.swift in Sources */,
 				87EB9F6C2B50C508003CB76F /* TransDocumentApp.swift in Sources */,
 				87C192572B50EA3E009964D3 /* TDEditTextView.swift in Sources */,
 				87C1925D2B51173D009964D3 /* TextAdjustUseCase.swift in Sources */,
+				879789042B53A73700DA3031 /* Infos.swift in Sources */,
 				87EB9F7E2B50CC94003CB76F /* NewDocumentModel.swift in Sources */,
 				87EB9F872B50D347003CB76F /* Date+Extension.swift in Sources */,
 				87C192672B512AA3009964D3 /* GetWordsFromSentenceUseCase.swift in Sources */,
@@ -305,6 +418,7 @@
 /* Begin XCBuildConfiguration section */
 		87EB9F752B50C509003CB76F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879789002B53A66300DA3031 /* environment.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -368,6 +482,7 @@
 		};
 		87EB9F762B50C509003CB76F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879789002B53A66300DA3031 /* environment.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -423,6 +538,7 @@
 		};
 		87EB9F782B50C509003CB76F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879789002B53A66300DA3031 /* environment.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -435,6 +551,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TransDocument/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +567,7 @@
 		};
 		87EB9F792B50C509003CB76F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879789002B53A66300DA3031 /* environment.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +580,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TransDocument/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,6 +616,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		879788E22B53933E00DA3031 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		879788E42B53933E00DA3031 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		879788E62B53933E00DA3031 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		879788E82B53933E00DA3031 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 879788E12B53933E00DA3031 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87EB9F602B50C508003CB76F /* Project object */;
 }

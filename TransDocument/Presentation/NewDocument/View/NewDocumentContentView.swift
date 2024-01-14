@@ -65,7 +65,8 @@ struct NewDocumentContentView: View {
         @StateObject var model = NewDocumentModel(
             textAdnustUseCase: TextAdjustUseCase(),
             sentenceAdjustUseCase: SentenceAdjustUseCase(),
-            getWordsFromSentenceUseCase: GetWordsFromSentenceUseCase()
+            getWordsFromSentenceUseCase: GetWordsFromSentenceUseCase(),
+            getTranslatedSentencesUseCase: GetTranslatedSentencesUseCase(repository: TranslatorRepository())
         )
         var body: some View {
             NewDocumentContentView(model: model)
